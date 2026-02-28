@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>INFINITE | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR (same sab pages mein) -->
+<nav>
+  <h3 class="brand">
+  <span class="orange">INF</span><span class="white">IN</span><span class="green">ITE</span>
+</h3>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<!-- HERO / PROFILE -->
+<section>
+  <img
+    src="images/pfp.jpeg"
+    alt="Profile"
+    style="
+      width:150px;
+      border-radius:50%;
+      border:4px solid #0a017c80;
+      box-shadow:0 0 40px rgba(7, 0, 110, 0.349);
+      display:block;
+      margin:0 auto 25px;
+    "
+  >
+
+  <h1>INFINITE </h1>
+
+  <p style="opacity:0.7;margin-top:10px;">
+    Video Editor • Designer • Tech Creator
+  </p>
+
+  <p style="max-width:650px;margin:25px auto;opacity:0.8;">
+    I help creators, brands and communities grow with high-quality
+    video editing, design and custom tech solutions.
+  </p>
+</section>
+
+<!-- COUNTERS -->
+<section>
+  <div class="stats">
+
+    <div class="stat-box">
+      <h1 class="counter" data-target="26">0</h1>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="stat-box">
+      <h1 class="counter" data-target="24">0</h1>
+      <p>Happy Clients</p>
+    </div>
+
+    <div class="stat-box">
+      <h1 class="counter" data-target="3">0</h1>
+      <p>Years Experience</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h1>What We Do For You</h1>
+
+  <div class="projects-grid">
+
+    <a href="video-editing.html" class="btn-3d">
+      Video Editing
+    </a>
+
+    <a href="logo-design.html" class="btn-3d">
+      Logo & Thumbnail Design
+    </a>
+
+    <a href="discord.html" class="btn-3d">
+      Discord Server Setup
+    </a>
+
+    <a href="minecraft.html" class="btn-3d">
+      Minecraft Server Setup
+    </a>
+
+  </div>
+</section>
+
+
+<!-- SOCIAL LINKS -->
+<section>
+  <h1>Find Me On</h1>
+
+  <div class="projects-grid">
+
+<a href="https://dc.gg/auraontop" class="btn-3d">Discord</a>
+<a href="https://www.behance.net/nxtinfinite481" class="btn-3d">Behance</a>
+
+
+  </div>
+</section>
+
+<!-- COUNTER SCRIPT -->
+<script>
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+      const speed = 40;
+
+      if (count < target) {
+        counter.innerText = count + 1;
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+    updateCount();
+  });
+</script>
+
+</body>
+</html>
